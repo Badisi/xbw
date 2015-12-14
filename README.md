@@ -5,8 +5,13 @@
 
 ## Installation
 
-    npm install --save xbw
+`xbw` is pre-built for node >= 5.1.1 and electron >= 0.36.0
 
+    npm install --save https://github.com/Badisi/xbw/releases/download/v0.1.0/xbw-v0.1.0-node.tgz
+    
+or 
+
+    npm install --save https://github.com/Badisi/xbw/releases/download/v0.1.0/xbw-v0.1.0-electron.tgz
 
 ## Usage
 
