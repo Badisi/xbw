@@ -5,13 +5,9 @@
 
 ## Installation
 
-`xbw` is pre-built for node >= 5.1.1 and electron >= 0.36.0
+`xbw` is pre-built for node >= 7.6.0
 
-    npm install --save https://github.com/Badisi/xbw/releases/download/v0.1.0/xbw-v0.1.0-node.tgz
-    
-or 
-
-    npm install --save https://github.com/Badisi/xbw/releases/download/v0.1.0/xbw-v0.1.0-electron.tgz
+npm install --save https://github.com/Badisi/xbw/releases/download/xbw-0.1.0.tgz
 
 ## Usage
 
@@ -112,7 +108,7 @@ Credit
 License
 -------
 
-Copyright © 2013-2016 [Badisi](https://github.com/Badisi)
+Copyright © 2013-2017 [Badisi](https://github.com/Badisi)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
