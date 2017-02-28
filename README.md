@@ -7,7 +7,9 @@
 
 `xbw` is pre-built for node >= 7.6.0
 
+```js
 npm install --save https://github.com/Badisi/xbw/releases/download/xbw-0.1.0.tgz
+```
 
 ## Usage
 
