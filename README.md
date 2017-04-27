@@ -55,8 +55,8 @@ let isoInfo = xbw.getIsoInfo('/Users/User/backups/Game.iso');
 console.log(isoInfo);
 // => {
 //        file: ''/Users/User/backups/Game.iso',
-//        titleId: "12345678",
-//        mediaId: "A1B2C3D4",
+//        titleId: '12345678',
+//        mediaId: 'A1B2C3D4',
 //        discCount: 2,
 //        discNumber: 1,
 //        regions: [
