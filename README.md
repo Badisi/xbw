@@ -1,14 +1,14 @@
 # xbw
 
-`xbw` is a node.js module utility which provides helpful functions to read and/or verify xbox 360 backup iso file.
+NodeJS module utility which provides helpful functions to read and/or verify xbox 360 backup iso file
 
 
 ## Installation
 
 `xbw` is pre-built for node >= 7.6.0
 
-```shell
-npm install --save https://github.com/Badisi/xbw/releases/download/v0.1.0/xbw-0.1.0.tgz
+```js
+npm install xbw --save
 ```
 
 ## Usage
@@ -86,17 +86,17 @@ var xbw = require('xbw');
 
 var options = '--c --af3 --splitvid --patchitanyway --patchgarbage --html'.split(' '); // abgx360 options
 var files = [
-    '/Users/User/backups/Game.iso'
+	'/Users/User/backups/Game.iso'
 ];
 
 xbw.verifiedWithAbgx360(
-	options.concat(files),
-	function(results) {
-		console.log(results); // => [0]
-	},
-	function(data) {
-    	console.log(data);
-	}
+    options.concat(files),
+    function(results) {
+        console.log(results); // => [0]
+    },
+    function(data) {
+        console.log(data);
+    }
 );
 ```
 
