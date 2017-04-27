@@ -14,7 +14,7 @@ npm install xbw --save
 ## Usage
 
 ```js
-var xbw = require('xbw');
+const xbw = require('xbw');
 ```
 
 
@@ -48,20 +48,20 @@ The `object` returned by this function has the following properties:
 __Example__
 
 ```js
-var xbw = require('xbw');
+const xbw = require('xbw');
 
-var infos = xbw.getIsoInfo('/Users/User/backups/Game.iso');
+let isoInfo = xbw.getIsoInfo('/Users/User/backups/Game.iso');
 
-console.log(infos);
+console.log(isoInfo);
 // => {
-//        file: "/Users/User/backups/Game.iso",
+//        file: ''/Users/User/backups/Game.iso',
 //        titleId: "12345678",
 //        mediaId: "A1B2C3D4",
 //        discCount: 2,
 //        discNumber: 1,
 //        regions: [
-//           "PAL"
-//           "NTSC_U"
+//           'PAL'
+//           'NTSC_U'
 //        ]
 //    }
 ```
@@ -82,21 +82,17 @@ __Arguments__
 __Example__
 
 ```js
-var xbw = require('xbw');
+const xbw = require('xbw');
 
-var options = '--c --af3 --splitvid --patchitanyway --patchgarbage --html'.split(' '); // abgx360 options
-var files = [
+let abgxOptions = '--c --af3 --splitvid --patchitanyway --patchgarbage --html'.split(' ');
+let files = [
 	'/Users/User/backups/Game.iso'
 ];
 
 xbw.verifiedWithAbgx360(
-    options.concat(files),
-    function(results) {
-        console.log(results); // => [0]
-    },
-    function(data) {
-        console.log(data);
-    }
+    abgxOptions.concat(files),
+    results => console.log(results), // => [0]
+    data => console.log(data)
 );
 ```
 
