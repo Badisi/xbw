@@ -76,7 +76,7 @@ Verify a backup iso file integrity against abgx360
 __Arguments__
 
 * `options` - An array of abgx360 options.
-* `success(results)` - A callback which is called when the process is finished. The `results` object is an array representing a result for each given file. Possible values are {0,-1,-2,-3} respectively for success, error, data error and stealth error.
+* `success(results)` - A callback which is called when the process is finished. The `results` object is an array representing a result for each given file. Possible values are {0,-1,-2,-3} respectively for SUCCESS, ERROR, DATA_ERROR and STEALTH_ERROR.
 * `progress(data)` - *(Optional)* A callback which is called for every process output.
 
 __Example__
@@ -86,7 +86,7 @@ const xbw = require('xbw');
 
 let abgxOptions = '--c --af3 --splitvid --patchitanyway --patchgarbage --html'.split(' ');
 let files = [
-	'/Users/User/backups/Game.iso'
+    '/Users/User/backups/Game.iso'
 ];
 
 xbw.verifiedWithAbgx360(
