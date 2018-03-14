@@ -26,6 +26,7 @@ const xbw = require('@badisi/xbw');
 ---------------------------------------
 
 <a name="getIsoInfo" />
+
 ### getIsoInfo(file)
 
 Extract information from a backup iso file
@@ -69,6 +70,7 @@ console.log(isoInfo);
 ---------------------------------------
 
 <a name="verifiedWithAbgx360" />
+
 ### verifiedWithAbgx360(options, success, [progress])
 
 Verify a backup iso file integrity against abgx360
