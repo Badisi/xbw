@@ -5,16 +5,16 @@ NodeJS module utility which provides helpful functions to read and/or verify xbo
 
 ## Installation
 
-`xbw` is pre-built for node >= 7.6.0
+`xbw` is pre-built for node 8.5.0
 
 ```js
-npm install xbw --save
+npm install @badisi/xbw --save
 ```
 
 ## Usage
 
 ```js
-const xbw = require('xbw');
+const xbw = require('@badisi/xbw');
 ```
 
 
@@ -106,7 +106,7 @@ Credit
 License
 -------
 
-Copyright © 2013-2017 [Badisi](https://github.com/Badisi)
+Copyright © 2013-2018 [Badisi](https://github.com/Badisi)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
