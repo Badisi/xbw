@@ -1,6 +1,6 @@
 @badisi/xbw
 --------------
-[![npm version](https://img.shields.io/npm/v/@badisi/xbw.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://npm.im/@badisi/xbw) [![npm donwloads](https://img.shields.io/npm/dm/@badisi/xbw.svg)](https://npmcharts.com/compare/@badisi/xbw?minimal=true) [![Dependency Status](https://img.shields.io/david/Badisi/xbw.svg)](https://david-dm.org/Badisi/xbw) [![license](https://img.shields.io/badge/License-Custom-blue)](https://github.com/Badisi/xbw/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@badisi/xbw.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://npm.im/@badisi/xbw) [![npm donwloads](https://img.shields.io/npm/dm/@badisi/xbw.svg)](https://npmcharts.com/compare/@badisi/xbw?minimal=true) [![Dependency Status](https://img.shields.io/david/Badisi/xbw.svg)](https://david-dm.org/Badisi/xbw) [![license](https://img.shields.io/badge/license-custom-blue)](https://github.com/Badisi/xbw/blob/master/LICENSE)
 
 NodeJS module utility which provides helpful functions to read and/or verify xbox 360 backup iso files
 
