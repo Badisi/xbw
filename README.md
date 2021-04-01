@@ -1,15 +1,23 @@
-@badisi/xbw
---------------
-[![npm version](https://img.shields.io/npm/v/@badisi/xbw.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://npm.im/@badisi/xbw) [![npm donwloads](https://img.shields.io/npm/dm/@badisi/xbw.svg)](https://npmcharts.com/compare/@badisi/xbw?minimal=true) [![Dependency Status](https://img.shields.io/david/Badisi/xbw.svg)](https://david-dm.org/Badisi/xbw) [![license](https://img.shields.io/badge/license-custom-blue)](https://github.com/Badisi/xbw/blob/master/LICENSE)
+# @badisi/xbw
 
 NodeJS module utility which provides helpful functions to read and/or verify xbox 360 backup iso files
+
+[![npm version](https://img.shields.io/npm/v/@badisi/xbw.svg?color=blue&logo=npm)][npm]
+[![npm donwloads](https://img.shields.io/npm/dw/@badisi/xbw.svg?color=blue)][npm-dl]
+[![license](https://img.shields.io/badge/license-custom-blue)][license]
+
+[![dependency status](https://img.shields.io/david/badisi/xbw.svg)][david-deps]
+
 
 ## Installation
 
 `xbw` is pre-built for node and electron.
 
-```js
-npm install @badisi/xbw
+```sh
+npm install @badisi/xbw --save
+```
+
+```sh
 yarn add @badisi/xbw
 ```
 
@@ -27,7 +35,7 @@ const { verifyWithAbgx360, getIsosInfo } = require('@badisi/xbw');
 
 ---------------------------------------
 
-<a name="getIsosInfo" />
+<a name="getIsosInfo"></a>
 
 ### getIsosInfo(isoPaths: string[]): IsoInfo[]
 
@@ -79,7 +87,7 @@ console.log(isosInfo);
 
 ---------------------------------------
 
-<a name="verifiyWithAbgx360" />
+<a name="verifiyWithAbgx360"></a>
 
 ### verifyWithAbgx360(isoPaths: string[], options?: AbgxOptions, onProgress?: (progress: string) => void): Promise<AbgxFile[]>
 
@@ -156,3 +164,11 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+
+[npm]: https://www.npmjs.com/package/@badisi/xbw
+[npm-dl]: https://npmcharts.com/compare/@badisi/xbw?minimal=true
+[license]: https://github.com/Badisi/xbw/blob/master/LICENSE
+[david-deps]: https://david-dm.org/badisi/xbw

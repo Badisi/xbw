@@ -1,6 +1,6 @@
 {
     "name": "@badisi/xbw",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Utility to read and/or verify xbox 360 backup iso files",
     "homepage": "https://github.com/Badisi/xbw",
     "license": "SEE LICENSE IN file",
@@ -26,7 +26,7 @@
         "node": ">=8.5.0"
     },
     "scripts": {
-        "install": "prebuild-install --tag-prefix ''"
+        "install": "prebuild-install --tag-prefix='v'"
     },
     "dependencies": {
         "bindings": "^1.5.0",
