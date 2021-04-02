@@ -3,7 +3,7 @@
 NodeJS module utility which provides helpful functions to read and/or verify xbox 360 backup iso files
 
 [![npm version](https://img.shields.io/npm/v/@badisi/xbw.svg?color=blue&logo=npm)][npm]
-[![npm donwloads](https://img.shields.io/npm/dw/@badisi/xbw.svg?color=blue)][npm-dl]
+[![npm donwloads](https://img.shields.io/npm/dw/@badisi/xbw.svg?color=blue&logo=npm)][npm-dl]
 [![license](https://img.shields.io/badge/license-custom-ff69b4)][license]
 
 [![dependency status](https://img.shields.io/david/badisi/xbw.svg)][david-deps]
