@@ -4,7 +4,7 @@ NodeJS module utility which provides helpful functions to read and/or verify xbo
 
 [![npm version](https://img.shields.io/npm/v/@badisi/xbw.svg?color=blue&logo=npm)][npm]
 [![npm donwloads](https://img.shields.io/npm/dw/@badisi/xbw.svg?color=blue)][npm-dl]
-[![license](https://img.shields.io/badge/license-custom-blue)][license]
+[![license](https://img.shields.io/badge/license-custom-ff69b4)][license]
 
 [![dependency status](https://img.shields.io/david/badisi/xbw.svg)][david-deps]
 
@@ -14,11 +14,11 @@ NodeJS module utility which provides helpful functions to read and/or verify xbo
 `xbw` is pre-built for node and electron.
 
 ```sh
-npm install @badisi/xbw --save
+$ npm install @badisi/xbw --save
 ```
 
 ```sh
-yarn add @badisi/xbw
+$ yarn add @badisi/xbw
 ```
 
 ## Usage
