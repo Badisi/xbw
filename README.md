@@ -139,7 +139,7 @@ verifiedWithAbgx360(files, options, (progress) => console.log(progress))
 Credit
 ------
 
-- [Seacrest](http://abgx360.xecuter.com/)
+* [Seacrest](http://abgx360.xecuter.com/)
 
 
 License
