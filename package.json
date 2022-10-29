@@ -1,6 +1,6 @@
 {
     "name": "@badisi/xbw",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Utility to read and/or verify xbox360 backup iso files",
     "homepage": "https://github.com/Badisi/xbw",
     "license": "SEE LICENSE IN file",
