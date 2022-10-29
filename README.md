@@ -37,7 +37,7 @@ $ xbw --help
     info ...... Extract information from backup iso files
 
   Examples:
-    $ xbw info backup.iso
+    $ xbw info .
     $ xbw info backup1.iso backup2.iso path/to/backups/folder/
     $ xbw verify backup.iso --corrupt --af3 --patchgarbage --patchitanyway
     $ xbw verify backup1.iso backup2.iso path/to/backups/folder
