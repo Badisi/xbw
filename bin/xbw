@@ -1,0 +1,54 @@
+#!usr/bin/env node
+
+'use strict';
+
+(async () => {
+    const { version } = require('../package.json');
+    const { verifyWithAbgx360, getIsosInfo } = require('../index.js');
+    const { blue, bold, cyan, dim, gray, green, italic, red, white } = require('@colors/colors/safe');
+
+    const args = process.argv.slice(2);
+
+    // Patch console.error so that it is printed in red color
+    const originalConsoleError = console.error;
+    console.error = (message) => originalConsoleError(red(message));
+
+    // Parse command line arguments
+    try {
+        switch (args.shift()) {
+            case 'verify':
+                await verifyWithAbgx360(args, undefined, console.log);
+                break;
+            case 'info':
+                console.log(cyan(JSON.stringify(getIsosInfo(args), null, 2)));
+                break;
+            default:
+                console.log(blue(bold('        _')));
+                console.log(blue(bold('  __  _| |____      __')));
+                console.log(blue(bold('  \\ \\/ / \'_ \\ \\ /\\ / /')));
+                console.log(blue(bold('   >  <| |_) \\ V  V / ')));
+                console.log(`${blue(bold('  /_/\\_\\_.__/ \\_/\\_/'))} ${green(italic(`v${version}`))}`);
+                console.log();
+                console.log(`  ${white(bold('Usage:'))}`);
+                console.log();
+                console.log(`    ${gray('$')} ${cyan('xbw <command> <file|folder...>')} ${cyan(dim('[--help] [options]'))}`);
+                console.log();
+                console.log(`  ${white(bold('Global Commands:'))}`);
+                console.log();
+                console.log(`    ${cyan('verify')} ${gray('.'.repeat(4))} ${white('Verify backup iso files integrity against abgx360')}`);
+                console.log(`    ${cyan('info')} ${gray('.'.repeat(6))} ${white('Extract information from backup iso files')}`);
+                console.log();
+                console.log(`  ${white(bold('Examples:'))}`);
+                console.log();
+                console.log(`    ${gray('$')} ${cyan('xbw info backup.iso')}`);
+                console.log(`    ${gray('$')} ${cyan('xbw info backup1.iso backup2.iso path/to/backups/folder/')}`);
+                console.log(`    ${gray('$')} ${cyan('xbw verify backup.iso --corrupt --af3 --patchgarbage --patchitanyway')}`);
+                console.log(`    ${gray('$')} ${cyan('xbw verify backup1.iso backup2.iso path/to/backups/folder')}`);
+                console.log(`    ${gray('$')} ${cyan('xbw verify backup.iso --html > output-file.html')}`);
+                console.log();
+                break;
+        }
+    } catch (error) {
+        console.error(error.message);
+    }
+})();

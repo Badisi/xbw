@@ -1,4 +1,3 @@
-export function verifyWithAbgx360(isoPaths: string[], options?: AbgxOptions, onProgress?: (progress: string) => void): Promise<AbgxFile[]>;
 export function getIsosInfo(isoPaths: string[]): IsoInfo[];
 export enum Region {
     REGION_FREE = 'REGION_FREE',
@@ -19,6 +18,17 @@ export enum Region {
     NTSC_U = 'NTSC_U',
     NTSCU_UNKNOW = 'NTSCU_UNKNOWN'
 }
+export interface IsoInfo {
+    file: string;
+    titleId: string;
+    mediaId: string;
+    discCount: number;
+    discNumber: number;
+    regions: Region[];
+    isValid: boolean;
+}
+
+export function verifyWithAbgx360(isoPaths: string[], options?: AbgxOptions, onProgress?: (progress: string) => void): Promise<AbgxFile[]>;
 export enum AbgxStatus {
     VERIFIED = 0,
     ERROR = -1,
@@ -123,13 +133,4 @@ export interface AbgxOptions {
     retries: number;
     lang: number;
     speed: number;
-}
-export interface IsoInfo {
-    file: string;
-    titleId: string;
-    mediaId: string;
-    discCount: number;
-    discNumber: number;
-    regions: Region[];
-    isValid: boolean;
 }

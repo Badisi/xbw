@@ -1,34 +1,58 @@
 # @badisi/xbw
 
-NodeJS module utility which provides helpful functions to read and/or verify xbox 360 backup iso files
+🎮 NodeJS module utility which provides helpful functions to read and/or verify xbox360 backup iso files.
 
 [![npm version](https://img.shields.io/npm/v/@badisi/xbw.svg?color=blue&logo=npm)][npm]
-[![npm donwloads](https://img.shields.io/npm/dw/@badisi/xbw.svg?color=blue&logo=npm)][npm-dl]
+[![npm donwloads](https://img.shields.io/npm/dw/@badisi/xbw.svg?color=7986CB&logo=npm)][npm-dl]
 [![license](https://img.shields.io/badge/license-custom-ff69b4)][license]
 
-[![dependency status](https://img.shields.io/david/badisi/xbw.svg)][david-deps]
+![darwin-x64](https://img.shields.io/badge/darwin-x64-green)
+![linux-x64](https://img.shields.io/badge/linux-x64-green)
+![win32-x64](https://img.shields.io/badge/win32-x64-green)
+![win32-ia32](https://img.shields.io/badge/win32-ia32-green)
 
 
 ## Installation
 
-`xbw` is pre-built for node and electron.
+**xbw** is pre-built for `node >= 12` and `electron` on latest ****macos****, ****linux**** and ****windows****.
 
 ```sh
-$ npm install @badisi/xbw --save
+npm install -g @badisi/xbw
 ```
 
 ```sh
-$ yarn add @badisi/xbw
+yarn global add @badisi/xbw
 ```
 
 ## Usage
 
-```js
-const { verifyWithAbgx360, getIsosInfo } = require('@badisi/xbw');
+```
+$ xbw --help
+
+  Usage:
+    $ xbw <command> <file|folder...> [--help] [options]
+
+  Global Commands:
+    verify .... Verify backup iso files integrity against abgx360
+    info ...... Extract information from backup iso files
+
+  Examples:
+    $ xbw info backup.iso
+    $ xbw info backup1.iso backup2.iso path/to/backups/folder/
+    $ xbw verify backup.iso --corrupt --af3 --patchgarbage --patchitanyway
+    $ xbw verify backup1.iso backup2.iso path/to/backups/folder
+    $ xbw verify backup.iso --html > output-file.html
 ```
 
+## API
 
-## Methods
+This package can also be installed locally and used as an API.
+
+```js
+const { getIsosInfo, verifyWithAbgx360 } = require('@badisi/xbw');
+```
+
+---------------------------------------
 
 * [getIsosInfo](#getIsosInfo)
 * [verifyWithAbgx360](#verifyWithAbgx360)
@@ -87,7 +111,7 @@ console.log(isosInfo);
 
 ---------------------------------------
 
-<a name="verifiyWithAbgx360"></a>
+<a name="verifyWithAbgx360"></a>
 
 ### verifyWithAbgx360(isoPaths: string[], options?: AbgxOptions, onProgress?: (progress: string) => void): Promise<AbgxFile[]>
 
@@ -124,7 +148,7 @@ const abgxOptions = {
     html: true
 };
 
-verifiedWithAbgx360(files, options, (progress) => console.log(progress))
+verifiedWithAbgx360(files, options, console.log)
     .then(results => console.log(results))
     .catch(error => console.error(error));
 // => [{
@@ -145,7 +169,7 @@ Credit
 License
 -------
 
-Copyright © 2013-2021 [Badisi](https://github.com/Badisi)
+Copyright © 2013-2022 [Badisi](https://github.com/Badisi)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
