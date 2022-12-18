@@ -1,16 +1,31 @@
-# @badisi/xbw
+<h1 align="center">
+    @badisi/xbw
+</h1>
 
-🎮 NodeJS module utility which provides helpful functions to read and/or verify xbox360 backup iso files.
+<p align="center">
+    <i>🎮 NodeJS module utility which provides helpful functions to read and/or verify xbox360 backup iso files.</i><br/>
+</p>
 
-[![npm version](https://img.shields.io/npm/v/@badisi/xbw.svg?color=blue&logo=npm)][npm]
-[![npm donwloads](https://img.shields.io/npm/dw/@badisi/xbw.svg?color=7986CB&logo=npm)][npm-dl]
-[![license](https://img.shields.io/badge/license-custom-ff69b4)][license]
+<p align="center">
+    <a href="https://www.npmjs.com/package/@badisi/xbw">
+        <img src="https://img.shields.io/npm/v/@badisi/xbw.svg?color=blue&logo=npm" alt="npm version" />
+    </a>
+    <a href="https://npmcharts.com/compare/@badisi/xbw?minimal=true">
+        <img src="https://img.shields.io/npm/dw/@badisi/xbw.svg?color=7986CB&logo=npm" alt="npm donwloads" />
+    </a>
+    <a href="https://github.com/Badisi/xbw/blob/main/LICENSE">
+        <img src="https://img.shields.io/badge/license-custom-ff69b4" alt="license" />
+    </a>
+</p>
 
-![darwin-x64](https://img.shields.io/badge/darwin-x64-green)
-![linux-x64](https://img.shields.io/badge/linux-x64-green)
-![win32-x64](https://img.shields.io/badge/win32-x64-green)
-![win32-ia32](https://img.shields.io/badge/win32-ia32-green)
+<p align="center">
+    <img src="https://img.shields.io/badge/darwin-x64-green" alt="build darwin-x64 status" />
+    <img src="https://img.shields.io/badge/linux-x64-green" alt="build linux-x64 status" />
+    <img src="https://img.shields.io/badge/win32-x64-green" alt="build win32-x64 status" />
+    <img src="https://img.shields.io/badge/win32-ia32-green" alt="build win32-ia32 status" />
+</p>
 
+<hr/>
 
 ## Installation
 
@@ -188,11 +203,3 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-
-[npm]: https://www.npmjs.com/package/@badisi/xbw
-[npm-dl]: https://npmcharts.com/compare/@badisi/xbw?minimal=true
-[license]: https://github.com/Badisi/xbw/blob/master/LICENSE
-[david-deps]: https://david-dm.org/badisi/xbw

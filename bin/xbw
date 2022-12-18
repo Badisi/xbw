@@ -40,7 +40,7 @@
                 console.log();
                 console.log(`  ${white(bold('Examples:'))}`);
                 console.log();
-                console.log(`    ${gray('$')} ${cyan('xbw info backup.iso')}`);
+                console.log(`    ${gray('$')} ${cyan('xbw info .')}`);
                 console.log(`    ${gray('$')} ${cyan('xbw info backup1.iso backup2.iso path/to/backups/folder/')}`);
                 console.log(`    ${gray('$')} ${cyan('xbw verify backup.iso --corrupt --af3 --patchgarbage --patchitanyway')}`);
                 console.log(`    ${gray('$')} ${cyan('xbw verify backup1.iso backup2.iso path/to/backups/folder')}`);
