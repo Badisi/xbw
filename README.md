@@ -8,14 +8,11 @@
 
 <p align="center">
     <a href="https://www.npmjs.com/package/@badisi/xbw">
-        <img src="https://img.shields.io/npm/v/@badisi/xbw.svg?color=blue&logo=npm" alt="npm version" />
-    </a>
+        <img src="https://img.shields.io/npm/v/@badisi/xbw.svg?color=blue&logo=npm" alt="npm version" /></a>
     <a href="https://npmcharts.com/compare/@badisi/xbw?minimal=true">
-        <img src="https://img.shields.io/npm/dw/@badisi/xbw.svg?color=7986CB&logo=npm" alt="npm donwloads" />
-    </a>
+        <img src="https://img.shields.io/npm/dw/@badisi/xbw.svg?color=7986CB&logo=npm" alt="npm donwloads" /></a>
     <a href="https://github.com/Badisi/xbw/blob/main/LICENSE">
-        <img src="https://img.shields.io/badge/license-custom-ff69b4" alt="license" />
-    </a>
+        <img src="https://img.shields.io/badge/license-custom-ff69b4" alt="license" /></a>
 </p>
 
 <p align="center">
@@ -184,7 +181,7 @@ Credit
 License
 -------
 
-Copyright © 2013-2022 [Badisi](https://github.com/Badisi)
+Copyright © 2013 [Badisi](https://github.com/Badisi)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
