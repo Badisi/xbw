@@ -1,6 +1,6 @@
 {
     "name": "@badisi/xbw",
-    "version": "2.0.15",
+    "version": "2.0.16",
     "description": "Utility to read and/or verify xbox360 backup iso files",
     "homepage": "https://github.com/Badisi/xbw",
     "license": "SEE LICENSE IN file",
@@ -14,7 +14,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Badisi/xbw.git"
+        "url": "https://github.com/Badisi/xbw"
     },
     "keywords": [
         "xbw",
