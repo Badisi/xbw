@@ -4,8 +4,9 @@ const xbw = require('node-gyp-build')(__dirname);
 const { lstatSync, readdirSync, existsSync } = require('fs');
 const { join } = require('path');
 
-/** @param {string[]} args */
+/** @param {string[]} args @returns {string[]} */
 const getIsoFilesFromArgs = (args = []) => {
+    /** @type {string[]} */
     const files = [];
     args
         .filter(arg => !arg.startsWith('-'))
