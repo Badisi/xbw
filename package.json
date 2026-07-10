@@ -1,6 +1,6 @@
 {
     "name": "@badisi/xbw",
-    "version": "2.0.18",
+    "version": "2.0.19",
     "description": "Utility to read and/or verify xbox360 backup iso files",
     "homepage": "https://github.com/Badisi/xbw",
     "license": "SEE LICENSE IN file",
@@ -14,7 +14,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Badisi/xbw"
+        "url": "git+https://github.com/Badisi/xbw.git"
     },
     "keywords": [
         "xbw",
@@ -44,7 +44,7 @@
         "install": "node-gyp-build"
     },
     "dependencies": {
-        "node-addon-api": "^8.7.0",
+        "node-addon-api": "^8.9.0",
         "node-gyp-build": "^4.8.4"
     }
 }
