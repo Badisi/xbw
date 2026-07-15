@@ -1,0 +1,58 @@
+{
+    "name": "@badisi/xbw",
+    "version": "3.0.0",
+    "description": "Utility to read and/or verify xbox360 backup iso files",
+    "homepage": "https://github.com/Badisi/xbw",
+    "license": "SEE LICENSE IN file",
+    "author": {
+        "name": "Badisi"
+    },
+    "bin": {
+        "xbw": "bin/xbw"
+    },
+    "main": "./index.cjs",
+    "module": "./index.mjs",
+    "types": "./index.d.mts",
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./index.d.mts",
+                "default": "./index.mjs"
+            },
+            "require": {
+                "types": "./index.d.cts",
+                "default": "./index.cjs"
+            }
+        },
+        "./package.json": "./package.json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Badisi/xbw.git"
+    },
+    "keywords": [
+        "xbw",
+        "xkeybrew",
+        "xkey",
+        "xbox360",
+        "abgx",
+        "abgx360",
+        "nodejs",
+        "iso",
+        "v8"
+    ],
+    "engines": {
+        "node": ">= 12"
+    },
+    "scripts": {
+        "install": "node-gyp-build"
+    },
+    "dependencies": {
+        "node-addon-api": "^8.9.0",
+        "node-gyp-build": "^4.8.4"
+    },
+    "allowScripts": {
+        "esbuild": true,
+        "fsevents": true
+    }
+}
