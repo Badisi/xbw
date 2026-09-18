@@ -1,0 +1,212 @@
+<h1 align="center">
+    @badisi/xbw
+</h1>
+
+<p align="center">
+    🎮 <i>NodeJS module utility which provides helpful functions to read and/or verify xbox360 backup iso files.</i><br/>
+</p>
+
+<p align="center">
+    <a href="https://www.npmjs.com/package/@badisi/xbw">
+        <img src="https://img.shields.io/npm/v/@badisi/xbw.svg?color=blue&logo=npm" alt="npm version" /></a>
+    <a href="https://npmcharts.com/compare/@badisi/xbw?minimal=true">
+        <img src="https://img.shields.io/npm/dw/@badisi/xbw.svg?color=7986CB&logo=npm" alt="npm donwloads" /></a>
+    <a href="https://github.com/Badisi/xbw/blob/main/LICENSE">
+        <img src="https://img.shields.io/badge/license-custom-ff69b4" alt="license" /></a>
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/badge/darwin-x64-green" alt="build darwin-x64 status" />
+    <img src="https://img.shields.io/badge/linux-x64-green" alt="build linux-x64 status" />
+    <img src="https://img.shields.io/badge/win32-x64-green" alt="build win32-x64 status" />
+    <img src="https://img.shields.io/badge/win32-ia32-green" alt="build win32-ia32 status" />
+</p>
+
+<hr/>
+
+## Installation
+
+**xbw** is pre-built for `node >= 12` and `electron` on latest ****macos****, ****linux**** and ****windows****.
+
+```sh
+npm install -g @badisi/xbw
+```
+
+```sh
+yarn global add @badisi/xbw
+```
+
+## Usage
+
+```
+$ xbw --help
+
+  Usage:
+    $ xbw <command> <file|folder...> [options] [--help]
+
+  Global Commands:
+    info ...... Extract information from backup iso files
+    verify .... Verify backup iso files integrity against abgx360
+
+  Examples:
+    $ xbw info .
+    $ xbw info backup1.iso backup2.iso path/to/backups/folder/
+    $ xbw verify backup.iso --corrupt --af3 --patchgarbage --patchitanyway
+    $ xbw verify backup1.iso backup2.iso path/to/backups/folder
+    $ xbw verify backup.iso --html > output-file.html
+```
+
+## API
+
+This package can also be installed locally and used as an API.
+
+```ts
+/** CommonJS */
+const { getIsosInfo, verifyWithAbgx360 } = require('@badisi/xbw');
+
+/** ESM / Typescript */
+import { getIsosInfo, verifyWithAbgx360 } from '@badisi/xbw';
+```
+
+---------------------------------------
+
+* [getIsosInfo](#getIsosInfo)
+* [verifyWithAbgx360](#verifyWithAbgx360)
+
+---------------------------------------
+
+<a name="getIsosInfo"></a>
+
+### getIsosInfo(isoPaths: string[]): Promise<IsoInfo[]>
+
+Extract information from backup iso files
+
+__Arguments__
+
+* `isoPaths` - An array of absolute paths to iso files.
+
+__Return__
+
+An array of `IsoInfo` objects that have the following properties:
+
+* `file: string` - A string representing the path to the iso backup.
+* `titleId: string` - A string representing the title id.
+* `mediaId: string` - A string representing the media id.
+* `discCount: number` - An integer representing the number of disc.
+* `discNumber: number` - An integer representing the disc number.
+* `regions: Region[]` - An array representing the regions.
+* `isValid: boolean` - A boolean representing whether the file is a valid iso backup or not.
+
+__Example__
+
+```ts
+import { getIsosInfo } from '@badisi/xbw';
+
+try {
+    const results = await getIsosInfo([
+        '/Users/User/backups/Game.iso',
+        '/test.iso'
+    ]);
+    console.log(results);
+    // => [{
+    //        file: '/Users/User/backups/Game.iso',
+    //        titleId: '12345678',
+    //        mediaId: 'A1B2C3D4',
+    //        discCount: 2,
+    //        discNumber: 1,
+    //        regions: [
+    //           'PAL'
+    //           'NTSC_U'
+    //        ],
+    //        isValid: true
+    //    }, {
+    //        file: '/test.iso',
+    //        isValid: false
+    //    }]
+} catch(error) {
+    console.error(error);
+}
+```
+
+---------------------------------------
+
+<a name="verifyWithAbgx360"></a>
+
+### verifyWithAbgx360(isoPaths: string[], options?: AbgxOptions, onProgress?: (progress: string) => void): Promise<AbgxFile[]>
+
+Verify backup iso files integrity against abgx360
+
+__Arguments__
+
+* `isoPaths` - An array of absolute paths to iso files.
+* `options` - *(Optional)* An object of abgx360 options.
+* `onProgress` - *(Optional)* A callback which is called for every processed output.
+
+__Return__
+
+An array of `AbgxFile` objects that have the following properties:
+
+* `file: string` - A string representing the path to the iso backup.
+* `status: AbgxStatus` - Possible values are: VERIFIED = 0, ERROR = -1, DATA_ERROR = -2 and STEALTH_ERROR = -3.
+
+__Example__
+
+```ts
+import { verifyWithAbgx360 } from '@badisi/xbw';
+
+const files = [
+    '/Users/User/backups/Game.iso',
+    '/test.iso'
+];
+
+const abgxOptions = {
+    corrupt: true,
+    af3: true,
+    patchgarbage: true,
+    patchitanyway: true,
+    html: true
+};
+
+try {
+    const results = await verifiedWithAbgx360(files, options, console.log);
+    console.log(results);
+    // => [{
+    //        file: '/Users/User/backups/Game.iso',
+    //        status: 0
+    //    }, {
+    //        file: '/test.iso',
+    //        status: -1
+    //    }]
+} catch(error) {
+    console.error(error);
+}
+```
+
+Credit
+------
+
+* [Seacrest](http://abgx360.xecuter.com/)
+
+
+License
+-------
+
+Copyright © 2013 [Badisi](https://github.com/Badisi)
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to use, copy, publish and/or distribute the Software,
+but with restriction including the rights to modify, merge, sublicense
+and/or sell copies of the Software, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
